@@ -10,12 +10,10 @@ namespace _9WayPuzzle
 {
     public class Tile : PictureBox
     {
+        public int value;
+
         public int currentX;
         public int currentY;
-        public int correctX;
-        public int correctY;
-
-        public bool isEmpty;
 
         public bool isNextTo(Tile other)
         {
@@ -57,21 +55,9 @@ namespace _9WayPuzzle
                 BackgroundImage = other.BackgroundImage;
                 other.BackgroundImage = (Image)tempImage;
 
-                int tempCorrectX, tempCorrectY, tempCurrentX, tempCurrentY;
-                tempCorrectX = correctX;
-                tempCorrectY = correctY;
-                // tempCurrentX = currentX;
-                // tempCurrentY = currentY;
-
-                correctX = other.correctX;
-                correctY = other.correctY;
-                // currentX = other.currentX;
-                // currentY = other.currentY;
-
-                other.correctX = tempCorrectX;
-                other.correctY = tempCorrectY;
-                // other.currentX = tempCurrentX;
-                // other.currentY = tempCurrentY;
+                int tempVal = value;
+                value = other.value;
+                other.value = tempVal;
 
                 return this;
             }            
@@ -86,26 +72,58 @@ namespace _9WayPuzzle
             emptyTile.BackgroundImage = BackgroundImage;
             BackgroundImage = null;
 
-            isEmpty = true;
-            emptyTile.isEmpty = false;
-
-            int tempCorrectX, tempCorrectY, tempCurrentX, tempCurrentY;
-            tempCorrectX = correctX;
-            tempCorrectY = correctY;
-            // tempCurrentX = currentX;
-            // tempCurrentY = currentY;
-
-            correctX = emptyTile.correctX;
-            correctY = emptyTile.correctY;
-            // currentX = other.currentX;
-            // currentY = other.currentY;
-
-            emptyTile.correctX = tempCorrectX;
-            emptyTile.correctY = tempCorrectY;
-            // other.currentX = tempCurrentX;
-            // other.currentY = tempCurrentY;
+            int tempVal = value;
+            value = emptyTile.value;
+            emptyTile.value = tempVal;
 
             return this;
+        }
+
+        internal void SetNewImage(int newVal)
+        {
+            Image newImage = null;
+
+            switch (newVal)
+            {
+                case 0:
+                    newImage = null;
+                    BackColor = Color.FromArgb(0, 176, 115);
+                    break;
+                case 1:
+                    newImage = Properties.Resources.icons8_1_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 2:
+                    newImage = Properties.Resources.icons8_2_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 3:
+                    newImage = Properties.Resources.icons8_3_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 4:
+                    newImage = Properties.Resources.icons8_4_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 5:
+                    newImage = Properties.Resources.icons8_5_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 6:
+                    newImage = Properties.Resources.icons8_6_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 7:
+                    newImage = Properties.Resources.icons8_7_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+                case 8:
+                    newImage = Properties.Resources.icons8_8_100;
+                    BackColor = Color.FromArgb(51, 51, 51);
+                    break;
+            }
+
+            BackgroundImage = newImage;
         }
     }
 }

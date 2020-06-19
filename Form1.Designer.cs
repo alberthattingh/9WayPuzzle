@@ -48,6 +48,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGetBoard = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tilesContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tile6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile3)).BeginInit();
@@ -285,12 +287,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::_9WayPuzzle.Properties.Resources.original;
-            this.pictureBox1.Location = new System.Drawing.Point(730, 307);
+            this.pictureBox1.Location = new System.Drawing.Point(752, 301);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 266);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 216);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnGetBoard
+            // 
+            this.btnGetBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetBoard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
+            this.btnGetBoard.Location = new System.Drawing.Point(689, 553);
+            this.btnGetBoard.Name = "btnGetBoard";
+            this.btnGetBoard.Size = new System.Drawing.Size(318, 44);
+            this.btnGetBoard.TabIndex = 2;
+            this.btnGetBoard.Text = "GET BOARD FROM FILE";
+            this.btnGetBoard.UseVisualStyleBackColor = true;
+            this.btnGetBoard.Click += new System.EventHandler(this.btnGetBoard_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -300,6 +318,7 @@
             this.ClientSize = new System.Drawing.Size(1080, 680);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnGetBoard);
             this.Controls.Add(this.btnShuffle);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tilesContainer);
@@ -349,6 +368,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnGetBoard;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
