@@ -135,7 +135,9 @@ namespace _9WayPuzzle
                 if (checkWin())
                 {
                     MessageBox.Show("Congratulations! You win! You finished in " + movesCount + " moves.", "Congratulations!");
-                    Application.Exit();
+                    movesCount = 0;
+                    lblMoves.Text = movesCount.ToString();
+                    // Application.Exit();
                 }
             }
         }
