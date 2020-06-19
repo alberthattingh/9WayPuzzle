@@ -75,13 +75,56 @@ namespace _9WayPuzzle
             tile9.currentY = 2;
 
             emptyTile = tile9;
+
+            //shuffleTiles();
+        }
+
+        private Tile getTileAtPosition(int[] position)
+        {
+            Tile tile = null;
+            foreach (Control control in tilesContainer.Controls)
+            {
+                tile = (Tile)control;
+                if (tile.currentX == position[0] && tile.currentY == position[1])
+                {
+                    return tile;
+                }
+            }
+            return tile;
         }
 
         private void shuffleTiles()
         {
-            Random random = new Random();
-            
+            do
+            {
+                List<int[]> indexes = new List<int[]>( new int[][] { new int[] {0,0}, new int[] {0,1}, new int[] {0,2},
+                                                                     new int[] {1,0}, new int[] {1,1}, new int[] {1,2},
+                                                                     new int[] {2,0}, new int[] {2,1}, new int[] {2,2} });
 
+                Random random = new Random();
+                int[] position;
+                int j;
+                Tile tileToSwap;
+
+                for (int i = 0; i < 9; i++)
+                {
+                    j = random.Next(0, indexes.Count);
+                    position = indexes[j];
+                    indexes.RemoveAt(j);
+
+                    tileToSwap = (Tile)tilesContainer.Controls[i];
+                    if (i == 8)
+                    {
+                        emptyTile = tileToSwap.swapTiles(getTileAtPosition(position), true);
+                    }
+                    else
+                    {
+                        tileToSwap.swapTiles(getTileAtPosition(position), false);
+                    }
+                }
+            }
+            while (checkWin()); // to make sure when shuffled it doesn't shuffle to solution
+         
         }
 
         private void clickOnTile(object sender, EventArgs e)
@@ -90,7 +133,7 @@ namespace _9WayPuzzle
             
             if (tile.isNextTo(emptyTile))
             {
-                emptyTile = tile.swapTiles(emptyTile);
+                emptyTile = tile.swapTiles(emptyTile, true);
                 movesCount++;
                 lblMoves.Text = movesCount.ToString();
 
@@ -132,6 +175,11 @@ namespace _9WayPuzzle
                 return false;
 
             return true;
+        }
+
+        private void btnShuffle_Click(object sender, EventArgs e)
+        {
+            shuffleTiles();
         }
     }
 }

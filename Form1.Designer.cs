@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.tilesContainer = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblMoves = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.tile6 = new _9WayPuzzle.Tile();
             this.tile3 = new _9WayPuzzle.Tile();
             this.tile9 = new _9WayPuzzle.Tile();
@@ -48,13 +38,17 @@
             this.tile4 = new _9WayPuzzle.Tile();
             this.tile2 = new _9WayPuzzle.Tile();
             this.tile1 = new _9WayPuzzle.Tile();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnShuffle = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblMoves = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tilesContainer.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile9)).BeginInit();
@@ -64,6 +58,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tile4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tilesContainer
@@ -82,107 +82,6 @@
             this.tilesContainer.Name = "tilesContainer";
             this.tilesContainer.Size = new System.Drawing.Size(590, 590);
             this.tilesContainer.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 48);
-            this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
-            this.button1.Location = new System.Drawing.Point(689, 614);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(318, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "SHUFFLE";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
-            this.panel3.Location = new System.Drawing.Point(689, 71);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(318, 190);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(310, 182);
-            this.panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 64);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NUMBER OF MOVES:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMoves
-            // 
-            this.lblMoves.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoves.Location = new System.Drawing.Point(0, 0);
-            this.lblMoves.Name = "lblMoves";
-            this.lblMoves.Size = new System.Drawing.Size(304, 69);
-            this.lblMoves.TabIndex = 1;
-            this.lblMoves.Text = "0";
-            this.lblMoves.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 64);
-            this.panel1.TabIndex = 4;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.lblMoves);
-            this.panel5.Location = new System.Drawing.Point(3, 93);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(304, 69);
-            this.panel5.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::_9WayPuzzle.Properties.Resources.original;
-            this.pictureBox1.Location = new System.Drawing.Point(730, 307);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 266);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = global::_9WayPuzzle.Properties.Resources.icons8_close_window_50;
-            this.btnExit.Location = new System.Drawing.Point(1035, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(42, 42);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // tile6
             // 
@@ -291,6 +190,108 @@
             this.tile1.TabStop = false;
             this.tile1.Click += new System.EventHandler(this.clickOnTile);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1080, 48);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = global::_9WayPuzzle.Properties.Resources.icons8_close_window_50;
+            this.btnExit.Location = new System.Drawing.Point(1035, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(42, 42);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnShuffle
+            // 
+            this.btnShuffle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShuffle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
+            this.btnShuffle.Location = new System.Drawing.Point(689, 614);
+            this.btnShuffle.Name = "btnShuffle";
+            this.btnShuffle.Size = new System.Drawing.Size(318, 44);
+            this.btnShuffle.TabIndex = 2;
+            this.btnShuffle.Text = "SHUFFLE";
+            this.btnShuffle.UseVisualStyleBackColor = true;
+            this.btnShuffle.Click += new System.EventHandler(this.btnShuffle_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(115)))));
+            this.panel3.Location = new System.Drawing.Point(689, 71);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(318, 190);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(310, 182);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lblMoves);
+            this.panel5.Location = new System.Drawing.Point(3, 93);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(304, 69);
+            this.panel5.TabIndex = 5;
+            // 
+            // lblMoves
+            // 
+            this.lblMoves.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoves.Location = new System.Drawing.Point(0, 0);
+            this.lblMoves.Name = "lblMoves";
+            this.lblMoves.Size = new System.Drawing.Size(304, 69);
+            this.lblMoves.TabIndex = 1;
+            this.lblMoves.Text = "0";
+            this.lblMoves.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(304, 64);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(304, 64);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NUMBER OF MOVES:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::_9WayPuzzle.Properties.Resources.original;
+            this.pictureBox1.Location = new System.Drawing.Point(730, 307);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(248, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,7 +300,7 @@
             this.ClientSize = new System.Drawing.Size(1080, 680);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnShuffle);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tilesContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -307,12 +308,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tilesContainer.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile9)).EndInit();
@@ -322,6 +317,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tile4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tile1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,7 +332,7 @@
         private System.Windows.Forms.Panel tilesContainer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnShuffle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private Tile tile6;

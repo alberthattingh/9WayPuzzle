@@ -15,6 +15,8 @@ namespace _9WayPuzzle
         public int correctX;
         public int correctY;
 
+        public bool isEmpty;
+
         public bool isNextTo(Tile other)
         {
             if (currentY == other.currentY)
@@ -39,14 +41,53 @@ namespace _9WayPuzzle
             return false;
         }
 
-        public Tile swapTiles(Tile other)
+        public Tile swapTiles(Tile other, bool empty)
+        {
+            if (empty)
+            {
+                return swapWithEmptyTile(other);
+            }
+            else
+            {
+                Color tempColor = BackColor;
+                BackColor = other.BackColor;
+                other.BackColor = tempColor;
+
+                object tempImage = BackgroundImage;
+                BackgroundImage = other.BackgroundImage;
+                other.BackgroundImage = (Image)tempImage;
+
+                int tempCorrectX, tempCorrectY, tempCurrentX, tempCurrentY;
+                tempCorrectX = correctX;
+                tempCorrectY = correctY;
+                // tempCurrentX = currentX;
+                // tempCurrentY = currentY;
+
+                correctX = other.correctX;
+                correctY = other.correctY;
+                // currentX = other.currentX;
+                // currentY = other.currentY;
+
+                other.correctX = tempCorrectX;
+                other.correctY = tempCorrectY;
+                // other.currentX = tempCurrentX;
+                // other.currentY = tempCurrentY;
+
+                return this;
+            }            
+        }
+
+        private Tile swapWithEmptyTile(Tile emptyTile)
         {
             Color tempColor = BackColor;
-            BackColor = other.BackColor;
-            other.BackColor = tempColor;
+            BackColor = emptyTile.BackColor;
+            emptyTile.BackColor = tempColor;
 
-            other.BackgroundImage = BackgroundImage;
+            emptyTile.BackgroundImage = BackgroundImage;
             BackgroundImage = null;
+
+            isEmpty = true;
+            emptyTile.isEmpty = false;
 
             int tempCorrectX, tempCorrectY, tempCurrentX, tempCurrentY;
             tempCorrectX = correctX;
@@ -54,13 +95,13 @@ namespace _9WayPuzzle
             // tempCurrentX = currentX;
             // tempCurrentY = currentY;
 
-            correctX = other.correctX;
-            correctY = other.correctY;
+            correctX = emptyTile.correctX;
+            correctY = emptyTile.correctY;
             // currentX = other.currentX;
             // currentY = other.currentY;
 
-            other.correctX = tempCorrectX;
-            other.correctY = tempCorrectY;
+            emptyTile.correctX = tempCorrectX;
+            emptyTile.correctY = tempCorrectY;
             // other.currentX = tempCurrentX;
             // other.currentY = tempCurrentY;
 
